@@ -1,14 +1,7 @@
 package com.github.gwt.stats.client;
+
 import com.github.gwt.stats.client.domain.Color;
 import com.github.gwt.stats.client.domain.Layer;
-
-import java.util.Date;
-import java.util.HashMap;
-
-import com.google.common.collect.Maps;
-import com.google.gwt.user.client.Element;
-import com.google.gwt.user.client.Event;
-import com.google.gwt.user.client.EventListener;
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.canvas.dom.client.CanvasPixelArray;
 import com.google.gwt.canvas.dom.client.Context2d;
@@ -19,6 +12,13 @@ import com.google.gwt.dom.client.Style.Cursor;
 import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.dom.client.Style.Unit;
 import com.google.gwt.user.client.DOM;
+import com.google.gwt.user.client.Element;
+import com.google.gwt.user.client.Event;
+import com.google.gwt.user.client.EventListener;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Stats {
 	static class Monitor {
@@ -27,7 +27,6 @@ public class Stats {
 		public CanvasElement canvas;
 		public Context2d context;
 		public ImageData imageData;
-		public Monitor(){}
 		public Monitor(Element div, Element text, CanvasElement canvas, Context2d context, ImageData imageData){
 			this.div = div;
 			this.text = text;
@@ -57,7 +56,7 @@ public class Stats {
 	private final String MB = "mb";
 
 	
-	private HashMap<String, Layer> colors = Maps.<String, Layer>newHashMap();
+	private Map<String, Layer> colors = new HashMap<String, Layer>();
 	private Element container, fpsDiv, fpsText, msDiv, msText, mbDiv, mbText;
 	private CanvasElement fpsCanvas, msCanvas, mbCanvas;
 	private Context2d fpsContext, msContext, mbContext;
@@ -150,7 +149,6 @@ public class Stats {
 		cs.setZIndex(10001);
 		DOM.sinkEvents(container, Event.ONCLICK);
 		DOM.setEventListener(container, new EventListener() {
-			@Override
 			public void onBrowserEvent(Event event) {
 				switch (DOM.eventGetType(event)){
 				case Event.ONCLICK:
