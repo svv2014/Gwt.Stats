@@ -5,19 +5,13 @@
     <artifactId>gwt-stats</artifactId>
     <packaging>jar</packaging>
     <version>0.1-SNAPSHOT</version>
-    <name>GWT.Stats</name>
+    <name>GWT-Stats</name>
 
     <properties>
         <gwt.version>2.7.0</gwt.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${gwt.version}</version>
-            <scope>runtime</scope>
-        </dependency>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
