@@ -1,5 +1,6 @@
 ﻿Gwt.Stats
 =========
+[![Build Status](https://travis-ci.org/svv2014/Gwt.Stats.svg?branch=master)](https://travis-ci.org/svv2014/Gwt.Stats)
 
 #### Native Google Web Toolkit port of [stats](https://github.com/mrdoob/stats.js) ####
 Just as an addition to [GWT port of three.js](https://github.com/vatula/gwt.threejs). I noticed poor performance of my port and wanted to measure how actually poor it is. Took just a little time so I thought “what the hell” and port that great utility from [mrdoob](https://github.com/mrdoob). JSNI was not chosen intentionally to keep experiment clean.
