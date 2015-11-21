@@ -1,10 +1,30 @@
 ﻿Gwt.Stats
 =========
+[![Build Status](https://travis-ci.org/svv2014/Gwt.Stats.svg?branch=master)](https://travis-ci.org/svv2014/Gwt.Stats)
 
 #### Native Google Web Toolkit port of [stats](https://github.com/mrdoob/stats.js) ####
-Just as an addition to [GWT port of three.js](https://github.com/vatula/gwt.threejs). I noticed poor performance of my port and wanted to measure how actually poor it is. Took just a little time so I thought “what the hell” and port that great utility from [mrdoob](https://github.com/mrdoob). JSNI was not chosen intentionally to keep experiment clean.
+
+#### Install
+Clon this project and run `mvn install` after add dependency to your project `pom.xml` 
+`````
+        <dependency>
+            <groupId>gwt.stats</groupId>
+            <artifactId>gwt-stats</artifactId>
+            <version>0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+`````
 
 #### Usage ####
+Minimum of usage
+```
+    Stats stats = new Stats();
+    RootPanel.get().getElement().appendChild(stats.getDomElement());
+    ....
+    //add this some where in your animation frame update 
+    stats.update();
+```
+
 Please refer to [original utility](https://github.com/mrdoob/stats.js) from [mrdoob](https://github.com/mrdoob) for usage. Port uses the same simple API.
 
 #### In Action ####
